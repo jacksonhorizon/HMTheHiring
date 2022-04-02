@@ -83,10 +83,12 @@ class CharacterCard(Card):
         self._flavor_text = flavor_text
         self._cost = cost
         self._tapped = False
+
         self._equipped_cards = []
         self._spell_cards = []
         self._active_effects = []
         self._position = None
+
         self.effect_activated = False
         self.immune = immune
         self.can_play = True
@@ -384,12 +386,16 @@ class SpellCard(Card):
         self._flavor_text = flavor_text
         self._cost = cost
         self._tapped = False
+
         self._targets = None
         self._factors = factors  # [0,10,0,0]
         self._special = special
         self._special_factors = special_factors  # [0,0,0,0]
         self._target_num = target_num
+
+        #tf is this used for
         self.can_play_this_turn = True
+
         self.effect_activated = False
         self.can_play = True
         self.can_play_turns = 0
@@ -579,15 +585,19 @@ class FashionItem(Card):
         self._flavor_text = flavor_text
         self._cost = cost
         self._tapped = False
+
         self._factors = factors
         self._target = target
         self._added_effects = added_effects
+
         self.effect_activated = False
         self.can_play = True
         self.can_play_turns = 0
         self.do_not_untap = False
         self.do_not_untap_turns = 0
         self.color = None
+
+        #tf does this do
         self.can_target = can_target
 
     def set_target(self, new_target):

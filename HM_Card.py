@@ -69,8 +69,8 @@ class Card:
         self._effects = effects
         self._flavor_text = flavor_text
         self._cost = cost
-        self.effect_activated = False
         self._tapped = False
+        self.effect_activated = False
         self._owner = 'player 1'
         self.immune = False
         self.can_play = True
